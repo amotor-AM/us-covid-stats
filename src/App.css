@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#covid {
+  color: Red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #f0f1f3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  justify-content: space-between;
+  
+}
+
+.app__dropdown {
+  background-color: white;
+}
+
+.app__left {
+  flex: 0.85;
+}
+
+.app__right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app__right .MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app_graph {
+  flex-grow: 1;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.CardContent__p {
+  margin-left: 5px;
+}
+
+.Table__h3 {
+  margin: 20px 2px;
+}
+@media (max-width: 1000px) {
+  .app {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.info__confirmed,
+.info__recovered,
+.info__deaths {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #555;
+}
+
+.info__name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.infoBox {
+  flex: 1;
+  cursor: pointer;
+}
+
+.infoBox:not(:last-child) {
+  margin-right: 20px;
+}
+
+.infoBox__cases {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoBox__casesGreen {
+  color: limegreen;
+}
+
+.infoBox--selected {
+  border-top: 10px solid limegreen;
+}
+
+.infoBox--Red {
+  border-color: red;
+}
+
+.infoBox--selected .infoBox__title {
+  margin-top: -10px
+}
+
+.infoBox__total {
+  color: #6c757d;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-top: 15px !important;
+}
+
+.infoBox__title {
+  font-size: 1.2rem !important;
+  font-weight: 650 !important;
+  margin-bottom: 0.5rem !important;
+  border-bottom: 2px solid currentColor;
 }
