@@ -18,6 +18,12 @@ body {
   
 }
 
+
+.logo {
+  width: 200px;
+}
+
+
 .app__dropdown {
   background-color: white;
 }
@@ -60,11 +66,6 @@ body {
 
 .Table__h3 {
   margin: 20px 2px;
-}
-@media (max-width: 1000px) {
-  .app {
-    flex-direction: column;
-  }
 }
 
 .info__confirmed,
@@ -125,4 +126,32 @@ body {
   font-weight: 650 !important;
   margin-bottom: 0.5rem !important;
   border-bottom: 2px solid currentColor;
+}
+
+@media (max-width: 1000px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .app__right {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 475px) {
+  .app__stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infoBox {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 90%;
+    padding: 0px;
+  }
+  .infoBox:not(:last-child) {
+    margin-right: 0px;
+  }
+
 }

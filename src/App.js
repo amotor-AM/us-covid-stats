@@ -6,6 +6,7 @@ import {
   Select,
   Card,
   CardContent,
+  Button
 } from "@material-ui/core";
 import InfoBox from "./InfoBox";
 import LineGraph from "./LineGraph";
@@ -13,6 +14,7 @@ import Table from "./Table";
 import { sortData, prettyPrintStat, prettyPrintStatTwo } from "./util";
 import Map from "./Map";
 import "leaflet/dist/leaflet.css";
+import Image from "./Covid-19.png"
 
 // For all numbers in brackets IE: (1), check the index found at the bottom of this page
 
@@ -173,9 +175,7 @@ const changeStates = async (e) => {
     <div className="app"> 
       <div className="app__left">
         <div className="app__header">
-          {/* Header */}
-          <h1>Track <span id="covid">Covid </span>Cases</h1>
-          {/* Dropdown Box */}
+          <img className="logo" src={Image} alt="logo" />
           <FormControl className="app__dropdown"> {/* (1) */}
             <Select
               variant = "outlined"
